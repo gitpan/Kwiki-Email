@@ -5,8 +5,11 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME              => 'Kwiki::Email',
     VERSION_FROM      => 'lib/Kwiki/Email.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
+    PREREQ_PM         => {
+		Email::Valid  => 0,
+		Kwiki::Plugin => 0,
+    },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/Kwiki/Email.pm', # retrieve abstract from module
-       AUTHOR         => 'Alexander Goller <alex@>') : ()),
+       AUTHOR         => 'Alexander Goller <decay@cpan.org>') : ()),
 );

@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Kwiki::Plugin '-Base';
 use Email::Valid;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 const class_id => 'email';
 
